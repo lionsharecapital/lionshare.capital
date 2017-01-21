@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Standard -->
+  <title>Lionshare</title>
+  <meta name="description" content="Simple cryptocurrency price & portfolio monitor for macOS">
+  <meta name="keywords" content="cryptocurrency, portfolio, lionshare">
+  <meta name="author" content="Lionshare">
+  <link rel="canonical" href="http://lionshare.capital">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+  <!-- Schema.org -->
+  <meta itemprop="name" content="Lionshare">
+  <meta itemprop="description" content="Simple cryptocurrency price & portfolio monitor for macOS 🦁">
+  <meta itemprop="url" content="http://lionshare.capital">
+  <meta itemprop="keywords" content="cryptocurrency, portfolio, lionshare">
+  <meta itemprop="image" content="http://lionshare.capital/assets/img/228x228.png">
+  <meta itemprop="sourceOrganization" content="Lionshare">
+  <meta itemprop="inLanguage" content="en-US">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@getlionshare">
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Lionshare">
+  <meta property="og:site_name" content="Lionshare">
+  <meta property="og:url" content="http://lionshare.capital">
+  <meta property="og:description" content="Simple cryptocurrency price & portfolio monitor for macOS 🦁">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="http://lionshare.capital/assets/img/228x228.png">
+</head>
+<link rel="stylesheet" href="styles.css">
+<body>
+  <div class="content__wrapper">
+    <section class="intro__wrapper">
+      <div class="intro">
+        <p>This is Lionshare <span class="intro__text__symbol"></span></p>
+        <p>It’s a simple mac app for people who own digital currency, or those that want to find out what would happen if they did.</p>
+        <div class="intro__actions">
+          <a id="download" href=# class="intro__actions__button"> Free download</a>
+          <div class="intro__actions__links">
+            <a href="https://github.com/lionsharecapital" class="actions__link">GitHub</a>
+            <span class="actions__divider">|</span>
+            <a href="#donate" class="actions__link">Donate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="demo__wrapper">
+      <div class="demo">
+        <img src="assets/img/demo-2.png" class="demo__img demo__img--2">
+        <img src="assets/img/demo-1.png" class="demo__img demo__img--1">
+        <div id="shadow" class="demo__shadow"></div>
+      </div>
+    </section>
+  </div>
+  <div id="overlay" class="overlay">
+    <div class="modal">
+      <div id="close" class="modal__close">×</div>
+      <p>Your download will begin shortly...</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var overlay = document.getElementById('overlay');
+    var download = document.getElementById('download');
+    var close = document.getElementById('close');
+    download.onclick = function() {
+      overlay.style.display = 'flex';
+    }
+    close.onclick = function() {
+      overlay.style.display = 'none';
+    }
+    window.onclick = function(event) {
+      if (event.target == overlay) {
+        overlay.style.display = 'none';
+      }
+    }
+  </script>
+  <script type="text/javascript" src="./assets/js/gradient.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-55966172-10', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

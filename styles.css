@@ -1,0 +1,261 @@
+@font-face {
+  font-family: 'San Francisco Mono';
+  src: url('assets/fonts/SFMono-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'San Francisco Mono';
+  src: url('assets/fonts/SFMono-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-family: 'San Francisco Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.content__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 740px;
+  height: 500px;
+  margin: 0px 40px;
+}
+
+.intro__wrapper {
+  z-index: 1;
+}
+
+.intro {
+  max-width: 300px;
+  margin-right: 40px;
+}
+
+.intro p {
+  margin-bottom: 20px;
+}
+
+.intro p:first-child {
+  font-weight: 700;
+}
+
+.intro__text__symbol:before {
+  content: '→';
+}
+
+.intro__actions {
+  font-weight: 700;
+}
+
+.intro__actions__button {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  border: 1px solid white;
+  border-radius: 2px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.intro__actions__button:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.intro__actions__button:active {
+  transform: translateY(2px);
+  outline: 0;
+}
+
+.intro__actions__links {
+  display: block;
+  font-size: 12px;
+}
+
+.actions__link {
+  text-decoration: none;
+  color: white;
+  opacity: 0.35;
+  transition: opacity 0.15s ease;
+}
+
+.actions__link:hover {
+  opacity: 1;
+  transition: opacity 0.15s ease;
+}
+
+.actions__divider {
+  opacity: 0.35;
+}
+
+.demo__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.demo {
+  position: relative;
+  width: 320px;
+  height: 500px;
+  animation: fadeIn 1s ease-out;
+}
+
+.demo__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 500px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.demo:after {
+  display: none;
+}
+
+.demo__img--1 {
+  animation-name: fadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  animation-direction: alternate;
+}
+
+.demo__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-filter: blur(40px);
+  background-size: 200% 200%;
+  background: linear-gradient(270deg, rgb(255, 115, 0), rgb(126, 15, 255));
+  animation: fadeIn 2s;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal {
+  position: relative;
+  padding: 40px;
+  background-color: white;
+  border-radius: 2px;
+  color: black;
+}
+
+.modal__close {
+  position: absolute;
+  top: 5px;
+  padding: 5px;
+  right: 7px;
+  line-height: 1;
+  font-size: 24px;
+  font-weight: 400;
+  opacity: 0.5;
+  user-select: none;
+  cursor: pointer;
+}
+
+.modal__close:hover {
+  opacity: 1;
+}
+
+.modal p {
+  font-weight: 700;
+}
+
+@media (max-width: 750px) {
+  body {
+    display: block;
+    overflow-x: hidden;
+  }
+
+  .content__wrapper {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+  }
+
+  .intro__wrapper {
+    order: 2;
+  }
+
+  .intro {
+    margin: 0;
+    text-align: center;
+  }
+
+  .intro__text__symbol:before {
+    content: '↑';
+  }
+
+  .demo__wrapper {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  .demo {
+    height: 200px;
+  }
+
+  .demo:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: -25px;
+    right: -25px;
+    bottom: -360px;
+    height: 320px;
+    background-color: black;
+    border-top: 1px solid rgba(255,255,255,0.35);
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 1; }
+  45% { opacity: 1; }
+  55% { opacity: 0; }
+  100% { opacity: 0; }
+}
