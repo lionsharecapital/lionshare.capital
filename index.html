@@ -39,13 +39,13 @@
         <p>This is Lionshare <span class="intro__text__symbol"></span></p>
         <p>It’s a simple mac app for people who own digital currency, or those that want to find out what would happen if they did.</p>
         <div class="intro__actions">
-          <a id="download" href=# class="intro__actions__button"> Free download</a>
+          <a href=# class="intro__actions__button"> Free download</a>
           <div class="intro__actions__links">
             <a href="https://twitter.com/getlionshare" class="actions__link">Twitter</a>
             <span class="actions__divider">|</span>
             <a href="https://github.com/lionsharecapital" class="actions__link">GitHub</a>
             <span class="actions__divider">|</span>
-            <a href="#donate" class="actions__link">Donate</a>
+            <a id="donate" href="#donate" class="actions__link">Donate</a>
           </div>
         </div>
       </div>
@@ -61,14 +61,14 @@
   <div id="overlay" class="overlay">
     <div class="modal">
       <div id="close" class="modal__close">×</div>
-      <p>Your download will begin shortly...</p>
+      <p>Donate to these addresses</p>
     </div>
   </div>
   <script type="text/javascript">
     var overlay = document.getElementById('overlay');
-    var download = document.getElementById('download');
+    var donate = document.getElementById('donate');
     var close = document.getElementById('close');
-    download.onclick = function() {
+    donate.onclick = function() {
       overlay.style.display = 'flex';
     }
     close.onclick = function() {

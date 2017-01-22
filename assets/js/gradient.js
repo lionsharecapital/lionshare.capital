@@ -1,8 +1,8 @@
 const shadow = document.getElementById('shadow');
 const gradients = [
   { start: [255, 115, 0], stop: [126, 15, 255] },
-  { start: [255, 115, 0], stop: [126, 15, 255] },
-  { start: [212, 121, 121], stop: [130, 105, 151] },
+  { start: [126, 15, 255], stop: [126, 15, 255] },
+  { start: [255, 115, 0], stop: [255, 115, 0] },
 ];
 const transitionTime = 4;
 let currentIndex = 0;

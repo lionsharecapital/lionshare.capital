@@ -87,11 +87,6 @@ body {
   transition: all 0.3s ease;
 }
 
-.intro__actions__button:active {
-  transform: translateY(2px);
-  outline: 0;
-}
-
 .intro__actions__links {
   display: block;
   font-size: 12px;
@@ -170,6 +165,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgba(0,0,0,0.5);
+  animation: fadeIn 0.25s ease;
 }
 
 .modal {
