@@ -16,6 +16,10 @@
   padding: 0;
 }
 
+html {
+  background-color: black;
+}
+
 html, body {
   height: 100%;
 }
@@ -25,7 +29,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
   font-family: 'San Francisco Mono', monospace;
   font-size: 14px;
   font-weight: 400;
@@ -153,48 +156,6 @@ body {
   background-size: 200% 200%;
   background: linear-gradient(270deg, rgb(255, 115, 0), rgb(126, 15, 255));
   animation: fadeIn 2s;
-}
-
-.overlay {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0,0,0,0.5);
-  animation: fadeIn 0.25s ease;
-}
-
-.modal {
-  position: relative;
-  padding: 40px;
-  background-color: white;
-  border-radius: 2px;
-  color: black;
-}
-
-.modal__close {
-  position: absolute;
-  top: 5px;
-  padding: 5px;
-  right: 7px;
-  line-height: 1;
-  font-size: 24px;
-  font-weight: 400;
-  opacity: 0.5;
-  user-select: none;
-  cursor: pointer;
-}
-
-.modal__close:hover {
-  opacity: 1;
-}
-
-.modal p {
-  font-weight: 700;
 }
 
 @media (max-width: 750px) {

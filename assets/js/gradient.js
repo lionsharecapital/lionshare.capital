@@ -2,9 +2,10 @@ const shadow = document.getElementById('shadow');
 const gradients = [
   { start: [255, 115, 0], stop: [126, 15, 255] },
   { start: [126, 15, 255], stop: [126, 15, 255] },
+  { start: [126, 15, 255], stop: [255, 115, 0] },
   { start: [255, 115, 0], stop: [255, 115, 0] },
 ];
-const transitionTime = 4;
+const transitionTime = 5;
 let currentIndex = 0;
 let nextIndex = 1;
 let stepsCount = 0;
@@ -55,7 +56,6 @@ function updateGradient() {
   const tColor2 = `
     rgb(${(rgbValues.stop[0] | 0)}, ${(rgbValues.stop[1] | 0)}, ${(rgbValues.stop[2] | 0)})
   `;
-
 
   if (tColor1 !== color1 || tColor2 !== color2) {
     color1 = tColor1;
