@@ -26,8 +26,14 @@ html, body {
 
 body {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-family: 'San Francisco Mono', monospace;
   font-size: 14px;
@@ -39,8 +45,14 @@ body {
 }
 
 .content__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 740px;
   height: 500px;
@@ -81,12 +93,14 @@ body {
   border-radius: 2px;
   text-decoration: none;
   color: white;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .intro__actions__button:hover {
   background-color: white;
   color: black;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -99,11 +113,13 @@ body {
   text-decoration: none;
   color: white;
   opacity: 0.35;
+  -webkit-transition: opacity 0.15s ease;
   transition: opacity 0.15s ease;
 }
 
 .actions__link:hover {
   opacity: 1;
+  -webkit-transition: opacity 0.15s ease;
   transition: opacity 0.15s ease;
 }
 
@@ -112,7 +128,11 @@ body {
 }
 
 .demo__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -120,6 +140,7 @@ body {
   position: relative;
   width: 320px;
   height: 500px;
+  -webkit-animation: fadeIn 1s ease-out;
   animation: fadeIn 1s ease-out;
 }
 
@@ -138,10 +159,15 @@ body {
 }
 
 .demo__img--1 {
+  -webkit-animation-name: fadeInOut;
   animation-name: fadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
   animation-duration: 8s;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
 
@@ -154,7 +180,9 @@ body {
   z-index: -1;
   -webkit-filter: blur(40px);
   background-size: 200% 200%;
+  background: -webkit-linear-gradient(45deg, rgb(255, 115, 0), rgb(126, 15, 255));
   background: linear-gradient(45deg, rgb(255, 115, 0), rgb(126, 15, 255));
+  -webkit-animation: fadeIn 2s;
   animation: fadeIn 2s;
 }
 
@@ -167,10 +195,15 @@ body {
   .content__wrapper {
     height: auto;
     width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   .intro__wrapper {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
   }
 
@@ -205,9 +238,21 @@ body {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeInOut {
+  0% { opacity: 1; }
+  45% { opacity: 1; }
+  55% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 @keyframes fadeInOut {
