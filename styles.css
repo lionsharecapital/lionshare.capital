@@ -52,7 +52,7 @@ body {
 }
 
 .intro {
-  max-width: 300px;
+  max-width: 280px;
   margin-right: 40px;
 }
 
@@ -154,7 +154,7 @@ body {
   z-index: -1;
   -webkit-filter: blur(40px);
   background-size: 200% 200%;
-  background: linear-gradient(270deg, rgb(255, 115, 0), rgb(126, 15, 255));
+  background: linear-gradient(45deg, rgb(255, 115, 0), rgb(126, 15, 255));
   animation: fadeIn 2s;
 }
 
