@@ -44,6 +44,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-size: 20px;
+}
+
 .content__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,11 +68,16 @@ body {
 }
 
 .intro {
-  max-width: 280px;
+  max-width: 370px;
   margin-right: 40px;
 }
 
 .intro p {
+  margin-bottom: 20px;
+  max-width: 350px;
+}
+
+.intro h1 {
   margin-bottom: 20px;
 }
 
@@ -138,7 +147,7 @@ body {
 
 .demo {
   position: relative;
-  width: 320px;
+  width: 250px;
   height: 500px;
   -webkit-animation: fadeIn 1s ease-out;
   animation: fadeIn 1s ease-out;
@@ -148,9 +157,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 320px;
+  width: 250px;
   height: 500px;
-  background-color: black;
+  /*background-color: black;*/
   border-radius: 10px;
 }
 
