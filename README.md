@@ -6,4 +6,4 @@ Static site for Lionshare. Plain 'ol HTML, CSS and Javascript.
 
 ## License
 
-MIT
+[MIT](https://opensource.org/licenses/MIT)
